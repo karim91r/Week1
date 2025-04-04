@@ -3,7 +3,7 @@ import Ipv4_project.test
 
 fun main(){
     test(
-        name = "should return true when given a valid 9x9 sudoku (filled board)",
+        name = "should return true when given a valid 3x3 sudoku (filled board)",
         result = isValidSudokuBoard(
             arrayOf(
                 arrayOf("5", "3", "4", "6", "7", "8", "9", "1", "2"),
@@ -20,14 +20,14 @@ fun main(){
         correctResult = true
     )
     test(
-        name = "should return true when given a valid 9x9 sudoku (empty board)",
+        name = "should return true when given a valid 3x3 sudoku (empty board)",
         result = isValidSudokuBoard(
             Array(9) { Array(9) { "-" } } // 9x9 grid filled with '-'
         ),
         correctResult = true
     )
     test(
-        name ="should return false when given a 9x9 sudoku with a duplicate in a row",
+        name ="should return false when given a 3x3 sudoku with a duplicate in a row",
         result= isValidSudokuBoard(
             arrayOf(
                 arrayOf("5", "3", "4", "6", "7", "8", "9", "1", "2"),
@@ -44,7 +44,7 @@ fun main(){
         correctResult = false
     )
     test(
-        name="should return false when given a 9x9 sudoku with a duplicate in a column",
+        name="should return false when given a 3x3 sudoku with a duplicate in a column",
         result = isValidSudokuBoard(
             arrayOf(
                 arrayOf("5", "3", "4", "6", "7", "8", "9", "1", "2"),
@@ -61,7 +61,7 @@ fun main(){
         correctResult = false
     )
     test(
-        name = "should return false when given a 9x9 sudoku with a duplicate in a 3x3 sub-grid",
+        name = "should return false when given a 3x3 sudoku with a duplicate in a 3x3 sub-grid",
         result = isValidSudokuBoard(
             arrayOf(
                 arrayOf("5", "3", "4", "6", "7", "8", "9", "1", "2"),
